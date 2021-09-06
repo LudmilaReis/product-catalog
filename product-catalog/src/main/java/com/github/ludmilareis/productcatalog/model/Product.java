@@ -1,11 +1,12 @@
 package com.github.ludmilareis.productcatalog.model;
 
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-
 @Document(indexName = "product")
 public class Product {
+
     @Id
     private Long id;
     private String name;
@@ -34,4 +35,8 @@ public class Product {
     public void setAmount(Integer amount) {
         this.amount = amount;
     }
+
+    public Product() {
+    }
+
 }
